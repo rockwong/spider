@@ -1,0 +1,23 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "no-empty-interface": false,
+    "ban-types": false,
+    "no-object-literal-type-assertion": false,
+    "curly": [true, "ignore-same-line"],
+    "array-type": false,
+    "max-classes-per-file": false,
+    "interface-name": false,
+    "forin": false,
+    "arrow-parens": false,
+    "semicolon": false,
+    "no-implicit-dependencies": false,
+    "member-access": [true, "no-public"],
+    "no-var-requires": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "no-submodule-imports": false,
+    "quotemark": [true, "single"],
+    "no-console": false
+  }
+}
