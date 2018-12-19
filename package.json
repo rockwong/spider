@@ -12,9 +12,14 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^10.12.17",
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "mkdirp-promise": "^5.0.1",
     "ramda": "^0.26.1"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.10",
+    "@types/mkdirp-promise": "^5.0.0",
     "@types/ramda": "^0.25.44",
     "tslint": "^5.12.0",
     "tslint-config-prettier": "^1.17.0",
