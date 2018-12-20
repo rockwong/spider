@@ -34,7 +34,7 @@ export interface ITaskItem {
 interface DownloadFileTaskParams {
   taskList: ITaskItem[];
   ajax: AxiosInstance;
-  overwriteExists?: boolean; // 是否覆盖文件
+  overwrite?: boolean; // 是否覆盖文件
 }
 
 /**
@@ -43,13 +43,13 @@ interface DownloadFileTaskParams {
  */
 
 export async function downloadFileTask(params: DownloadFileTaskParams) {
-  const { taskList, overwriteExists = true, ajax } = params;
+  const { taskList, overwrite = true, ajax } = params;
   // 获取章节主题和视频链接
   const errorList: any[] = [];
   for (const [index, item] of taskList.entries()) {
     const pathStr = item.save;
     // 是否覆盖文件
-    if (!overwriteExists) {
+    if (!overwrite) {
       // 文件已存在，跳过任务
       if (fs.existsSync(pathStr)) {
         console.log(' "%s" 已存在，跳过本次任务', item.save);

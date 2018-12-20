@@ -1,9 +1,7 @@
 import * as http from 'http';
-import { demo } from './demo/demo';
 
 function main() {
   console.log('test node ts12');
-  demo();
 }
 
 main();

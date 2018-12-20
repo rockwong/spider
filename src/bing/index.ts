@@ -60,7 +60,11 @@ async function spider() {
     // 获取页面的列表
     taskList = taskList.concat(getTaskJson($));
   }
-  const errorList = await downloadFileTask({ taskList, ajax });
+  const errorList = await downloadFileTask({
+    taskList,
+    ajax,
+    overwrite: config.overwrite,
+  });
   if (!R.isEmpty(errorList)) {
     fs.writeFileSync(`${config.errorFile}`, JSON.stringify(errorList));
     console.log('%d 条任务出错,请见 %s', errorList.length, config.errorFile);
